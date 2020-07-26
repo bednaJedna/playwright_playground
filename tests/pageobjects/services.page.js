@@ -11,7 +11,7 @@ class Services extends Page {
   constructor() {
     super();
     this.url = "https://www.tesena.com/en/services";
-    this.pageTitle = "Services";
+    this.pageTitle = "Services — Tesena";
   }
 }
 module.exports = new Services();

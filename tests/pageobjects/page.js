@@ -11,7 +11,7 @@ module.exports.default = class Page {
   page;
 
   async openPage(url) {
-    this.chromium = await Chromium.launch();
+    this.chromium = await Chromium.launch({ headless: true });
     this.context = await this.chromium.newContext();
     this.page = await this.context.newPage();
     await this.page.goto(url);
