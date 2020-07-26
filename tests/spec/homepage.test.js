@@ -1,7 +1,7 @@
 const Homepage = require("../pageobjects/homepage");
 const expect = require("chai").expect;
 
-describe("test to start browser", function () {
+describe("Homepage tests", function () {
   before(async function () {
     await Homepage.openHomepage();
   });
