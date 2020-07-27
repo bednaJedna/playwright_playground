@@ -1,4 +1,4 @@
-const Chromium = require("playwright").chromium;
+const Playwright = require("playwright");
 
 /**
  * Generic Page class.
@@ -6,13 +6,14 @@ const Chromium = require("playwright").chromium;
  * @class
  */
 module.exports.default = class Page {
-  chromium;
+  browser;
   context;
   page;
+  browsers = ["chromium", "firefox", "webkit"];
 
-  async openPage(url) {
-    this.chromium = await Chromium.launch({ headless: true });
-    this.context = await this.chromium.newContext();
+  async openPage(url, browser) {
+    this.browser = await Playwright[browser].launch({ headless: true });
+    this.context = await this.browser.newContext();
     this.page = await this.context.newPage();
     await this.page.goto(url);
   }
@@ -22,6 +23,6 @@ module.exports.default = class Page {
    * @async
    */
   async close() {
-    await this.chromium.close();
+    await this.browser.close();
   }
 };
