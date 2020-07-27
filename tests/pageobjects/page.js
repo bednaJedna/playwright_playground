@@ -11,6 +11,14 @@ module.exports.default = class Page {
   page;
   browsers = ["chromium", "firefox", "webkit"];
 
+  /**
+   * Launches Playwrights for given browser, starts new Context,
+   * opens new page and then loads website in that page
+   * @method
+   * @async
+   * @param {string} url url to open in page
+   * @param {object} browser browser instance
+   */
   async openPage(url, browser) {
     this.browser = await Playwright[browser].launch({ headless: true });
     this.context = await this.browser.newContext();
