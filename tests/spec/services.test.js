@@ -15,5 +15,18 @@ Services.browsers.forEach(function (browser) {
       const title = await Services.page.title();
       expect(title).equals(Services.pageTitle);
     });
+
+    it("CTA buttons are visible", async function () {
+      let flag;
+      const elementHandles = await Services.getCtaBttnsElements();
+      elementHandles.forEach(async function (elemHandle) {
+        try {
+          await elemHandle.scrollIntoViewIfNeeded();
+        } catch (err) {
+          flag = false;
+        }
+      });
+      expect(flag).is.not.false;
+    });
   });
 });

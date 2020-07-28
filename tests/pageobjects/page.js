@@ -27,6 +27,7 @@ module.exports.default = class Page {
     this.context = await this.browser.newContext();
     this.page = await this.context.newPage();
     await this.page.goto(url);
+    await this.page.waitForLoadState("networkidle");
   }
   /**
    * Closes Playwright browser object instance
