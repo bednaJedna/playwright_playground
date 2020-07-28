@@ -6,6 +6,9 @@ const Playwright = require("playwright");
  * @class
  */
 module.exports.default = class Page {
+  // eslint does not like this
+  // however, these are valid class fields as specified
+  // by here: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields
   browser;
   context;
   page;

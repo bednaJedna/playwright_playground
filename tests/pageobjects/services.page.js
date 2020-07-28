@@ -1,7 +1,7 @@
 const Page = require("./page").default;
 
 /**
- * Class for Homepage
+ * Class for Services page
  * @class
  */
 class Services extends Page {

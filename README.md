@@ -4,7 +4,7 @@ Examples and experiments to try with [Microsoft Playwright](https://github.com/m
 
 ## What is currently implemented:
 
-- tests are running on chromium
+- tests are running on all browsers
 - Page Object Pattern implemented
 - mochajs test framework is used
 - mochajs native spec console reporting is used
