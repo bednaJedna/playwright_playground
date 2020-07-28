@@ -11,7 +11,7 @@ Homepage.browsers.forEach(function (browser) {
       await Homepage.close();
     });
 
-    it(`Homepage title is ${Homepage.pageTitle}`, async function () {
+    it(`page title is ${Homepage.pageTitle}`, async function () {
       const title = await Homepage.page.title();
       expect(title).equals(Homepage.pageTitle);
     });

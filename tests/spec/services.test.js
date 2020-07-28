@@ -11,7 +11,7 @@ Services.browsers.forEach(function (browser) {
       await Services.close();
     });
 
-    it(`Homepage title is ${Services.pageTitle}`, async function () {
+    it(`page title is ${Services.pageTitle}`, async function () {
       const title = await Services.page.title();
       expect(title).equals(Services.pageTitle);
     });
