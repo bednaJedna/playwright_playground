@@ -2,5 +2,6 @@
   "timeout": 50000,
   "reporter": ["spec", "mochawesome"],
   "parallel": true,
-  "slow": 3000
+  "slow": 3000,
+  "logVerbose": true
 }
