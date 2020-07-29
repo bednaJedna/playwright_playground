@@ -9,6 +9,8 @@ module.exports.default = class Page {
   // eslint does not like this
   // however, these are valid class fields as specified
   // by here: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields
+  // you need to use babel-eslint plugin and modify .eslintrc.js accordingly
+  // see: https://github.com/babel/babel-eslint
   browser;
   context;
   page;
