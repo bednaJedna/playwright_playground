@@ -15,6 +15,7 @@ module.exports.default = class Page {
   context;
   page;
   browsers = ["chromium", "firefox", "webkit"];
+  gtmUrl = "https://www.googletagmanager.com/gtm.js?id=GTM-KDG2FB9";
 
   /**
    * Launches browser of given type as Playwright instance.
