@@ -1,5 +1,6 @@
 {
   "timeout": 50000,
   "reporter": ["spec", "mochawesome"],
-  "parallel": true
+  "parallel": true,
+  "slow": 3000
 }

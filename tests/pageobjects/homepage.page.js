@@ -17,19 +17,18 @@ class Homepage extends Page {
       loc: '//div[contains(@class, "section-background-cover")]',
       color: "167, 68, 68",
     };
-    this.locContactForm = '//form[@id="form_1"]';
-    this.locContactFormInputName =
-      '//form[@id="form_1"]//input[contains(@name,"name")]';
-    this.locContactFormInputEmail =
-      '//form[@id="form_1"]//input[contains(@name,"email")]';
-    this.locContactFormInputPhone =
-      '//form[@id="form_1"]//input[contains(@name,"phone")]';
-    this.locContactFormConsentCheckbox =
-      '//form[@id="form_1"]//input[contains(@type,"checkbox")]';
-    this.locContactFormSubmitButton =
-      '//form[@id="form_1"]//button[contains(@type,"submit")]';
-    this.locContactFormErrorMessage =
-      '//form[@id="form_1"]//div[contains(@class,"error")]';
+    this.contactForm = {
+      loc: {
+        form: '//form[@id="form_1"]',
+        inputName: '//form[@id="form_1"]//input[contains(@name,"name")]',
+        inputEmail: '//form[@id="form_1"]//input[contains(@name,"email")]',
+        inputPhone: '//form[@id="form_1"]//input[contains(@name,"phone")]',
+        consentCheckbox:
+          '//form[@id="form_1"]//input[contains(@type,"checkbox")]',
+        submitButton: '//form[@id="form_1"]//button[contains(@type,"submit")]',
+        errorMessage: '//form[@id="form_1"]//div[contains(@class,"error")]',
+      },
+    };
   }
 
   /**

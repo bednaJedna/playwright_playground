@@ -23,19 +23,18 @@ Homepage.browsers.forEach(function (browser) {
     });
 
     it("form is visible", async function () {
-      const elementHandle = await Homepage.page.$(Homepage.locContactForm);
+      const elementHandle = await Homepage.page.$(
+        Homepage.contactForm.loc.form
+      );
       const status = await Homepage.isVisible_(elementHandle);
       expect(status).not.to.be.false;
     });
 
     it("error messages displayed if email and consent not provided", async function () {
-      const submitBttnHandle = await Homepage.page.$(
-        Homepage.locContactFormSubmitButton
-      );
-      await submitBttnHandle.click();
+      await Homepage.page.click(Homepage.contactForm.loc.submitButton);
 
       const elementHandles = await Homepage.page.$$(
-        Homepage.locContactFormErrorMessage
+        Homepage.contactForm.loc.errorMessage
       );
       expect(elementHandles.length).equals(2);
 
