@@ -8,6 +8,8 @@ Examples and experiments to try with [Microsoft Playwright](https://github.com/m
 - Page Object Pattern implemented
 - mochajs test framework is used
 - mochajs native spec console reporting is used
+- config file can be used
+- mochawesome reporter can be used (does not support native Mochajs parallel mode, though)
 
 ## How to install
 
@@ -26,4 +28,10 @@ To run tests in parallel:
 
 ```
 .\node_modules\.bin\mocha tests\spec\** -t 120000 --parallel
+```
+
+You can specify mocha CLI parameters in config file and then run tests like this:
+
+```
+.\node_modules\.bin\mocha tests\spec\** --config .\mocharc.json
 ```
