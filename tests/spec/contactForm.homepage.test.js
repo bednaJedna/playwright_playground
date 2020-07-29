@@ -40,11 +40,9 @@ Homepage.browsers.forEach(function (browser) {
       expect(elementHandles.length).equals(2);
 
       let flags = [];
-      elementHandles.forEach(
-        await function (element) {
-          flags.push(Homepage.isVisible_(element));
-        }
-      );
+      elementHandles.forEach(async function (element) {
+        flags.push(await Homepage.isVisible_(element));
+      });
       expect(flags).not.contains(false);
     });
   });
