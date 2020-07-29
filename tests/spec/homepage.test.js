@@ -8,7 +8,7 @@ Homepage.browsers.forEach(function (browser) {
     });
 
     after(async function () {
-      await Homepage.close();
+      await Homepage.closeBrowser();
     });
 
     it(`page title is ${Homepage.pageTitle}`, async function () {

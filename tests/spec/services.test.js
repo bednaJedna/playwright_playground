@@ -8,7 +8,7 @@ Services.browsers.forEach(function (browser) {
     });
 
     after(async function () {
-      await Services.close();
+      await Services.closeBrowser();
     });
 
     it(`page title is ${Services.pageTitle}`, async function () {

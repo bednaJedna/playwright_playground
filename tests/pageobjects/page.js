@@ -21,7 +21,9 @@ module.exports.default = class Page {
    * @param {string} browser supported browser type, e.g. "chromium", "firefox", "webkit"
    */
   async launchBrowser(browser) {
-    this.browser = await Playwright[browser].launch({ headless: true });
+    this.browser = await Playwright[browser].launch({
+      headless: true,
+    });
   }
 
   /**
@@ -57,13 +59,24 @@ module.exports.default = class Page {
     await this.page.goto(url);
     await this.page.waitForLoadState("networkidle");
   }
+
   /**
-   * Closes Playwright browser object instance
+   * close Playwright browser object instance
    * @method
    * @async
    */
-  async close() {
+  async closeBrowser() {
     await this.browser.close();
+  }
+
+  /**
+   * Close browser context. All pages in this context will be closed.
+   * Default context cannot be closed.
+   * @method
+   * @async
+   */
+  async closeContext() {
+    await this.context.close();
   }
 
   /**
