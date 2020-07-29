@@ -23,5 +23,17 @@ Homepage.browsers.forEach(function (browser) {
       );
       expect(selectorCheck).is.not.null;
     });
+
+    it("header background color is correct", async function () {
+      const headerBackgroundElement = await Homepage.page.$(
+        Homepage.headerBigBackgroundBar.loc
+      );
+      expect(
+        await Homepage.verifyElementStyleColor(
+          headerBackgroundElement,
+          Homepage.headerBigBackgroundBar.color
+        )
+      ).to.be.true;
+    });
   });
 });
