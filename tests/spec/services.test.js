@@ -17,16 +17,12 @@ Services.browsers.forEach(function (browser) {
     });
 
     it("CTA buttons are visible", async function () {
-      let flag;
+      let flags = [];
       const elementHandles = await Services.getCtaBttnsElements();
       elementHandles.forEach(async function (elemHandle) {
-        try {
-          await elemHandle.scrollIntoViewIfNeeded();
-        } catch (err) {
-          flag = false;
-        }
+        flags.push(await Services.isVisible_(elemHandle));
       });
-      expect(flag).is.not.false;
+      expect(flags).not.contains(false);
     });
   });
 });

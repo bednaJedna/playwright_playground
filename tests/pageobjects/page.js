@@ -65,4 +65,22 @@ module.exports.default = class Page {
   async close() {
     await this.browser.close();
   }
+
+  /**
+   * Checks, if element is visible on the page by
+   * "abusing" elementHandle.scrollIntoViewIfNeeded() method
+   * @method
+   * @async
+   * @param {object} elementHandle elementHandle
+   * @returns {boolean} false, if is not visible, else undefined
+   */
+  async isVisible_(elementHandle) {
+    let flag;
+    try {
+      await elementHandle.scrollIntoViewIfNeeded();
+    } catch (error) {
+      flag = false;
+    }
+    return flag;
+  }
 };
