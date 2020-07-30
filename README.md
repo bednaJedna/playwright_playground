@@ -1,5 +1,7 @@
 # Playwright playground
 
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+
 Examples and experiments to try with [Microsoft Playwright](https://github.com/microsoft/playwright) JavaScript based cross-browser automation library.
 
 ## What is currently implemented:
