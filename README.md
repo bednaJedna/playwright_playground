@@ -11,7 +11,8 @@ Examples and experiments to try with [Microsoft Playwright](https://github.com/m
 - mochajs test framework is used
 - mochajs native spec console reporting is used
 - config file can be used
-- mochawesome reporter can be used (does not support native Mochajs parallel mode, though)
+- mochawesome reporter can be used (currently does not support native Mochajs parallel mode, but there is open issue on its github)
+- allure reporter can be used (currently does not support native Mochajs parallel mode)
 
 ## How to install
 
