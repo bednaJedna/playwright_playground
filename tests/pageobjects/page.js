@@ -99,4 +99,17 @@ module.exports.default = class Page {
     }
     return flag;
   }
+
+  /**
+   * Returns dataLayer from page context. Basically runs javascript code in the browser
+   * and result (if any) is passed back to node runtime.
+   * @method
+   * @async
+   * @returns {Array} datalayer - an array of objects, each object is a tracking event
+   */
+  async getDatalayer() {
+    return this.page.evaluate(() => {
+      return window.dataLayer;
+    });
+  }
 };
