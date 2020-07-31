@@ -13,6 +13,7 @@ Examples and experiments to try with [Microsoft Playwright](https://github.com/m
 - config file can be used
 - mochawesome reporter can be used (currently does not support native Mochajs parallel mode, but there is open issue on its github)
 - allure reporter can be used (currently does not support native Mochajs parallel mode)
+- added one API test totally unrelated with Playwright, just to figure out, how to do this stuff in Nodejs/JavaScript world
 
 ## How to install
 
