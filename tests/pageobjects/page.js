@@ -25,7 +25,7 @@ module.exports.default = class Page {
    */
   async launchBrowser(browser) {
     this.browser = await Playwright[browser].launch({
-      headless: false,
+      headless: true,
     });
   }
 
